@@ -10,8 +10,11 @@ exports.generateToken = (user) => {
         username: user.username,
     }
 
+    //Only attach the is admin if it is true 
     if(user.is_admin) jwtUser.is_admin = true
+    
     console.log("🧑 ",user);
+
     return jwt.sign(jwtUser,
         process.env.JWT_ACCESS_SECRET_KEY,
         {expiresIn: "60m"}

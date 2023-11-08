@@ -26,6 +26,7 @@ exports.getUserVehicle = async (req, res) => {
       },
     });
   
+    //Call the get UserVehicle to handel the response
     this.getUserVehicle(req, res);
   }
   
