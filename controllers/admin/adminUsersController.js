@@ -4,14 +4,14 @@ const { getUserById } = require("../../services/userService");
 
 
 exports.findAll = async (req,res)=>{
-    const users = await userid   
+    const users = await User.findAll()   
     res.status(200).json(users);
 }
 
 
 
 exports.findById = async (req,res)=>{
-    let user = getUserById(req.params.userid);
+    let user = await getUserById(req.params.userid);
     //formate
     res.status(200).json(user);
 }
@@ -22,7 +22,7 @@ exports.findById = async (req,res)=>{
 //Give or Take off admin previlidge from a user
 exports.toggleAdmin = async (req, res)=>{
 
-    let user = getUserById(req.params.userid);
+    let user = await getUserById(req.params.userid);
     
     user.is_admin = !user.is_admin;
 

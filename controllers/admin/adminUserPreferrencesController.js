@@ -64,10 +64,33 @@ exports.deleteProductById = async (req, res) => {
 }
 
 
+exports.updateProductById = async (req, res) => {
+
+    const product = await OilProduct.update({
+        name : req.body.name,
+        image : req.body.image,
+        viscosity_grade : req.body.viscosity_grade,
+        price : req.body.price,
+        volume : req.body.volume,
+        additives : req.body.additives,
+        description : req.body.description,
+    },{
+        where:{
+            id: req.params.id
+        }
+    })
+
+    if(!product[0])
+        return res.status(400).json({message:"Nothing changed"})
+    return this.getProductById(req,res)
+}
 
 exports.createProduct = async (req, res) => {
 
     const product = await OilProduct.create({
+        climate_id : req.body.climate_id,
+        brand_id:req.body.brand_id,
+        vehicle_type_id : req.body.vehicle_type_id,
         name : req.body.name,
         image : req.body.image,
         viscosity_grade : req.body.viscosity_grade,

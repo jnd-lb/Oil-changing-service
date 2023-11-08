@@ -6,6 +6,7 @@ const dbSync = require("./database/sequelize-sync");
 
 //Import Routers
 const userRoute = require("./routes/user.route");
+const adminRoute = require("./routes/admin.route");
 const oilRoute = require("./routes/oil.route");
 const { verifyToken } = require("./middlewares/authJWT");
 const { isAdmin } = require("./middlewares/authorizationMiddleware");
@@ -31,9 +32,11 @@ app.use(cors({origin: '*'}));
 
 //SETTING THE ROUTES
 app.use('/api/users', userRoute);
+app.use('/api/admins', [verifyToken, isAdmin] ,adminRoute);
+
+//For listing on webpage 
 app.use('/api/oils', oilRoute);
 
-app.use('/api/admins', [verifyToken, isAdmin] ,userRoute);
 
 
 //Default route

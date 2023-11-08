@@ -32,7 +32,7 @@ router.post('/vehicle',[...createOrUpdateVehicleValidation,handelValidationResul
 
 
 //Oil Changing History
-router.get('/oilchanging',[...createOrUpdateVehicleValidation,handelValidationResult, verifyToken],getUserOilChangingHistory)
+router.get('/oilchanging',[verifyToken],getUserOilChangingHistory)
 //router.get('/oilchanging/nextchange',[verifyToken],)
 
 

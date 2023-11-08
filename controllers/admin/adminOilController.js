@@ -36,13 +36,13 @@ exports.addOilChangingRecord = async (req, res)=>{
     })
     
     
-    res.status(200).json(oilChanging)
+    return this.getUserOilChangingHistory(req,res)
  }
 
  
  
  exports.deleteChangingRecord = async (req, res)=>{
-    const oilChanging = await OilChangingHistory.delete({
+    const oilChanging = await OilChangingHistory.destroy({
        where:{
            id:req.params.id
        }

@@ -26,13 +26,24 @@ exports.getUserVehicle = async (req, res) => {
       },
     });
   
-    getUserVehicle(req, res);
+    this.getUserVehicle(req, res);
   }
   
   
   
   exports.addUserVehicle = async (req, res) => {
-    const vehicle = await UserVehicle.create({
+    let vehicle = await UserVehicle.findOne({ 
+      where:{
+        user_id : req.user.id
+      }
+    })
+
+    if(vehicle){
+      return res.status(300).json({
+        message:"Only one vehicle allowed"
+      })
+    }
+    vehicle = await UserVehicle.create({
       user_id: req.user.id,
       name: req.body.name,
       number_of_cylinders: req.body.number_of_cylinders,
