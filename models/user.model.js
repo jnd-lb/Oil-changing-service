@@ -39,10 +39,10 @@ const initUser = (sequelize,DataTypes)=>{
 
 
         //Format how the user will be returned after creation
-        User.addHook('afterCreate', (user, options) => {
+        // User.addHook('afterCreate', (user, options) => {
             
-            return user;
-          });
+        //     return user;
+        //   });
         
         return User;
 }

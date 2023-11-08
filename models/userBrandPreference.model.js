@@ -4,7 +4,7 @@ const sequelize = require("../database/sequelize");
 //Here we are defining a function that take two params (sequelize instance and the Datatype)
 //This function will use the given sequelize instance to define the model then return it
 const initUserBrandPreference = (sequelize,DataTypes)=>{
-        const UserBrandPreference = sequelize.define("user_brand_preferences_model", {
+        const UserBrandPreference = sequelize.define("user_brand_preferences", {
             //Forign Keys
             user_id:  {
                 type: DataTypes.INTEGER,

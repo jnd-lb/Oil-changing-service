@@ -23,7 +23,7 @@ const initOilProduct = (sequelize,DataTypes)=>{
             volume: {
                 type:DataTypes.DOUBLE
             },
-            Additives:{
+            additives:{
                 type: DataTypes.STRING,
                 allowNull: true
             },

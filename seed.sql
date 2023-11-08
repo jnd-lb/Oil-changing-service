@@ -1,13 +1,13 @@
-insert into brands (id, name, image, createdAt, updatedAt) values (1, 'Mobile 1', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (2, 'Castrol', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (3, 'Valvoline', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (4, 'Pennozoil', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (5, 'Royal Purple', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (6, 'Shell', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (7, 'Quaker State', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (8, 'Licas Oil', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (9, 'Motul', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
-insert into brands (id, name, image, createdAt, updatedAt) values (10, 'Total', null, '2023-11-07 16:25:57', '2023-11-07 16:25:57');
+insert into brands (id, name, image) values (1, 'Mobile 1', null);
+insert into brands (id, name, image) values (2, 'Castrol', null);
+insert into brands (id, name, image) values (3, 'Valvoline', null);
+insert into brands (id, name, image) values (4, 'Pennozoil', null);
+insert into brands (id, name, image) values (5, 'Royal Purple', null);
+insert into brands (id, name, image) values (6, 'Shell', null);
+insert into brands (id, name, image) values (7, 'Quaker State', null);
+insert into brands (id, name, image) values (8, 'Licas Oil', null);
+insert into brands (id, name, image) values (9, 'Motul', null);
+insert into brands (id, name, image) values (10, 'Total', null);
 
 
 insert into vehicles_types (id, name) values (1, 'Car');
