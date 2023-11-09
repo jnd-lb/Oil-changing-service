@@ -38,7 +38,7 @@ exports.getUserVehicle = async (req, res) => {
         user_id : req.user.id
       }
     })
-
+    
     if(vehicle){
       return res.status(300).json({
         message:"Only one vehicle allowed"
@@ -51,6 +51,7 @@ exports.getUserVehicle = async (req, res) => {
       oil_changing_interval_in_km: req.body.oil_changing_interval_in_km,
       vehicle_type_id: req.body.vehicle_type_id
     })
-  
+    
+    //Call the get UserVehicle to handel the response
     res.status(200).json(vehicle)
   }

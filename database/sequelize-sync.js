@@ -10,13 +10,13 @@ const dbSync = ()=>{
             .catch(err=>
                 {   
                     console.log(`Error db sync: ${err.message}`)
-                    exit(1)
+                    process.exit(1)
                 }
             );
         console.log('Connection has been established successfully.');
     }).catch((error) => {
         console.error('Unable to connect to the database: ', error);
-        exit(1)
+        process.exit(1)
     });
 }
  
